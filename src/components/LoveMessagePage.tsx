@@ -71,24 +71,17 @@ const LoveMessagePage = ({ onComplete }: LoveMessagePageProps) => {
             {photos.map((photo, index) => (
               <div
                 key={photo.id}
-                className="photo-frame aspect-square flex items-center justify-center bg-gradient-to-br from-secondary/50 to-muted/50"
+                className="photo-frame aspect-square overflow-hidden"
                 style={{
                   animation: showPhotos ? `zoom-in 0.8s ease-out ${index * 0.2}s forwards` : 'none',
                   opacity: 0,
                 }}
               >
-                {/* 
-                  Replace this placeholder with your actual image:
-                  <img 
-                    src={`/image${photo.id}.jpg`} 
-                    alt={`Memory ${photo.id}`}
-                    className="w-full h-full object-cover"
-                  />
-                */}
-                <div className="text-center p-4">
-                  <span className="text-4xl mb-2 block">💝</span>
-                  <span className="text-sm text-muted-foreground">{photo.placeholder}</span>
-                </div>
+                <img 
+                  src={photo.src} 
+                  alt={`Memory ${photo.id}`}
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>
