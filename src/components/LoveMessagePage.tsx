@@ -23,12 +23,12 @@ const LoveMessagePage = ({ onComplete }: LoveMessagePageProps) => {
 
   // Placeholder images - replace these with your actual photos
   // Put your images in the public folder and update these paths
-  const photos = [
-    { id: 1, placeholder: '📷 Photo 1' },
-    { id: 2, placeholder: '📷 Photo 2' },
-    { id: 3, placeholder: '📷 Photo 3' },
-    { id: 4, placeholder: '📷 Photo 4' },
-    { id: 5, placeholder: '📷 Photo 5' },
+   const photos = [
+    { id: 1, src: '/IMG1.JPG' },
+    { id: 2, src: '/IMG2.JPG' },
+    { id: 3, src: '/IMG3.JPG' },
+    { id: 4, src: '/IMG4.JPG' },
+    { id: 5, src: '/IMG5.JPG' },
   ];
 
   return (
