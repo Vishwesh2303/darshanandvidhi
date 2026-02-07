@@ -3,6 +3,7 @@ import LandingPage from '../components/LandingPage';
 import CountdownPage from '../components/CountdownPage';
 import LoveMessagePage from '../components/LoveMessagePage';
 import FinalPage from '../components/FinalPage';
+import BackgroundMusic from '../components/BackgroundMusic';
 
 // Step-based navigation (no react-router needed)
 type Step = 'landing' | 'countdown' | 'message' | 'final';
@@ -28,6 +29,7 @@ const Index = () => {
 
   return (
     <div className="relative">
+      <BackgroundMusic />
       {renderPage()}
     </div>
   );
