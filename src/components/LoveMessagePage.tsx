@@ -21,15 +21,14 @@ const LoveMessagePage = ({ onComplete }: LoveMessagePageProps) => {
     };
   }, [onComplete]);
 
-  // Placeholder images - replace these with your actual photos
-  // Put your images in the public folder and update these paths
-   const photos = [
-    { id: 1, src: '/IMG1.JPG.jpeg' },
-  { id: 2, src: '/IMG2.JPG.jpeg' },
-  { id: 3, src: '/IMG3.JPG.jpeg' },
-  { id: 4, src: '/IMG4.JPG.jpeg' },
-  { id: 5, src: '/IMG5.JPG.jpeg' },
-
+  // Use import.meta.env.BASE_URL to handle the base path correctly
+  const basePath = import.meta.env.BASE_URL;
+  const photos = [
+    { id: 1, src: `${basePath}IMG1.JPG.jpeg` },
+    { id: 2, src: `${basePath}IMG2.JPG.jpeg` },
+    { id: 3, src: `${basePath}IMG3.JPG.jpeg` },
+    { id: 4, src: `${basePath}IMG4.JPG.jpeg` },
+    { id: 5, src: `${basePath}IMG5.JPG.jpeg` },
   ];
 
   return (
